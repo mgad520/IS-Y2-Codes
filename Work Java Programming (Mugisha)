@@ -1,0 +1,189 @@
+Names: Mugisha Alex Gad
+Reg no: 223008547
+Java Assignment.
+
+
+QN 1.
+package mgad.mugisha1;
+import java.util.Scanner;
+public class EVOD {
+
+    public static void main(String[] args) {
+        
+             Scanner s = new Scanner(System.in);
+             System.out.println("Enter a number");
+             int n = s.nextInt();
+             if(n%2==0){
+             System.out.println("The number is even");
+             } else {
+             System.out.println("The number is odd");
+             }     
+
+    }
+}
+QN2.
+package mgad.mugisha1;
+import java.util.Scanner;
+
+public class Switch {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a grade (A, B, C, D, F): ");
+        char grade = scanner.next().charAt(0);
+        switch (grade) {
+            case 'A' -> System.out.println("Excellent!");
+            case 'B' -> System.out.println("Good job!");
+            case 'C' -> System.out.println("Fair!");
+            case 'D' -> System.out.println("Needs improvement.");
+            case 'F' -> System.out.println("Fail. Try again.");
+            default -> System.out.println("Invalid grade entered.");
+        }
+    }
+}
+QN3.
+package mgad.mugisha1;
+import java.util.Scanner;
+
+public class Year {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a year: ");
+        int year = scanner.nextInt();
+        // Check if the year is a leap year
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+    }
+}
+QN4.
+package mgad.mugisha1;
+import java.util.Scanner;
+public class Large {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        int a = scanner.nextInt();
+        System.out.println("Enter the second number: ");
+        int b = scanner.nextInt();
+        System.out.println("Enter the third number: ");
+        int c = scanner.nextInt();
+        if (a > b && a > c) {
+            System.out.println(a + " is the largest.");
+        } else if (b > a && b > c) {
+            System.out.println(b + " is the largest.");
+        } else {
+            System.out.println(c + " is the largest.");
+        }
+    }
+}
+QN5.
+package mgad.mugisha1;
+import java.util.Scanner;
+
+public class Sign{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        if (number > 0) {
+            System.out.println(number + " is positive.");
+        } else if (number < 0) {
+            System.out.println(number + " is negative.");
+        } else {
+            System.out.println("The number is zero.");
+        }
+    }
+}
+QN6.
+package mgad.mugisha1;
+public class TriangleP {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 7; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+QN7.
+package mgad.mugisha1;
+import java.util.Scanner;
+
+public class Diamond {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number of rows for the diamond shape: ");
+        int rows = scanner.nextInt();
+        for (int i = 1; i <= rows; i++) {
+            for (int j = rows - i; j > 0; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = rows - 1; i > 0; i--) {
+            for (int j = rows - i; j > 0; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+QN8.
+package mgad.mugisha1;
+
+public class Averag {
+    public static void main(String[] args) {
+        int[] numbers = {10, 2, 4, 23, 96, 78};
+        
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        double average = (double) sum / numbers.length;
+        System.out.println("The average of the array elements is: " + average);
+    }
+}
+QN9.
+package mgad.mugisha1;
+public class Reverse{
+    public static void main(String[] args) {
+        
+        int[] numbers = {3, 4, 6, 1, 9, 7, 5, 8};
+
+        System.out.print("Original Array: ");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+        System.out.println();
+        System.out.print("Reversed Array: ");
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            System.out.print(numbers[i] + " ");
+        }
+    }
+}
+QN10.
+package mgad.mugisha1;
+
+public class Largearray {
+    public static void main(String[] args) {
+        int[] numbers = {34, 23, 12, 45, 67, 89, 234, 26, 10, 30, 43};
+        int largest = numbers[0];
+
+    
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > largest) {
+                largest = numbers[i];
+            }
+        }
+        System.out.println("The largest element in the array is: " + largest);
+    }
+}
